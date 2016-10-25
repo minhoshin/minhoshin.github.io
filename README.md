@@ -1,1 +1,0 @@
-# minhoshin.github.io

@@ -5,9 +5,9 @@ Contact
 > Seoul, South Korea
 > 010-2500-6771
 
-> minho.shin@gmail.com |
+> minho.shin@gmail.com
 
-> https://www.linkedin.com/in/shinminho |
+> https://www.linkedin.com/in/shinminho
 
 > https://github.com/minhoshin
 

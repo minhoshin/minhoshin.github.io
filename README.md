@@ -20,7 +20,7 @@ Heroku, DigitalOcean)
 
 ### Software Engineering Projects
 
-MANAFIT | Full Stack Developer, Mobile Web Application to Dressroom and Coordinate
+MANAFIT | Full Stack Developer | Mobile Web Application to Dressroom and Coordinate
 * https://github.com/minhoshin/xyz
 * Implemented Single Page Application using React(redux) and HTML5 to access to Mobile Camera, using Canvas to crop and save photos in the form of dress
 * Established photo uploading functionality using axios, enabling synchronous data(base64) encoding and decoding flow between client and server
@@ -29,7 +29,7 @@ MANAFIT | Full Stack Developer, Mobile Web Application to Dressroom and Coordina
 * Developed feature to load and edit the saved coordinates on the Fabric.js's canvas.
 * Implemented social login using Google and Facebook accounts.
 
-AROUNDYOU | Full Stack Developer, Google map-based location information service
+AROUNDYOU | Full Stack Developer | Google map-based location information service
 * https://github.com/minhoshin/AroundYou
 * Implemented Single Page application using React.
 * Created social login using Google accounts.

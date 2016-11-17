@@ -64,4 +64,6 @@ Bachelor’s Degree / Department of Management Science and Engineering / 2004
 
 Master’s Degree / Computer Science / 2010
 
+* [Thesis] - The design and implementation of the project reporting system for matrix organization structure
+
 Code States / Advanced Software Engineering Immersive / 2016

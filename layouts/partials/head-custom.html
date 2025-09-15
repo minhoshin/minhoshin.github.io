@@ -1,0 +1,15 @@
+{{- if .Site.Params.googleAdSense -}}
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client={{ .Site.Params.googleAdSense }}" crossorigin="anonymous"></script>
+{{- end -}}
+
+{{- if .Site.Params.mermaid -}}
+<link rel="stylesheet" href="{{ "css/mermaid.css" | relURL }}">
+<script src="https://cdn.jsdelivr.net/npm/mermaid@10.9.1/dist/mermaid.min.js"></script>
+<script src="{{ "js/mermaid.js" | relURL }}"></script>
+{{- end -}}
+
+<!-- 페이징 스타일 -->
+<link rel="stylesheet" href="{{ "css/pagination.css" | relURL }}">
+
+<!-- 카테고리 스타일 -->
+<link rel="stylesheet" href="{{ "css/category.css" | relURL }}">

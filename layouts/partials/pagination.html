@@ -1,0 +1,74 @@
+{{- if .Paginator -}}
+{{- $paginator := .Paginator -}}
+{{- if gt $paginator.TotalPages 1 -}}
+<div class="pagination">
+  <div class="pagination__list">
+    {{- /* 첫 페이지 링크 */ -}}
+    {{- if $paginator.HasPrev -}}
+      <a class="pagination__link pagination__link--first" href="{{ $paginator.First.URL }}" aria-label="첫 페이지">
+        ««
+      </a>
+    {{- end -}}
+    
+    {{- /* 이전 페이지 링크 */ -}}
+    {{- if $paginator.HasPrev -}}
+      <a class="pagination__link pagination__link--prev" href="{{ $paginator.Prev.URL }}" aria-label="이전 페이지">
+        «
+      </a>
+    {{- end -}}
+    
+    {{- /* 페이지 번호들 */ -}}
+    {{- $currentPage := $paginator.PageNumber -}}
+    {{- $totalPages := $paginator.TotalPages -}}
+    {{- $startPage := math.Max 1 (sub $currentPage 2) -}}
+    {{- $endPage := math.Min $totalPages (add $currentPage 2) -}}
+    
+    {{- /* 시작 페이지가 1이 아니면 첫 페이지와 생략 표시 */ -}}
+    {{- if gt $startPage 1 -}}
+      <a class="pagination__link" href="{{ $paginator.First.URL }}">1</a>
+      {{- if gt $startPage 2 -}}
+        <span class="pagination__ellipsis">…</span>
+      {{- end -}}
+    {{- end -}}
+    
+    {{- /* 페이지 번호들 */ -}}
+    {{- range $paginator.Pagers -}}
+      {{- $pageNum := .PageNumber -}}
+      {{- if and (ge $pageNum $startPage) (le $pageNum $endPage) -}}
+        {{- if eq $pageNum $currentPage -}}
+          <span class="pagination__link pagination__link--current" aria-current="page">
+            {{ $pageNum }}
+          </span>
+        {{- else -}}
+          <a class="pagination__link" href="{{ .URL }}" aria-label="페이지 {{ $pageNum }}">
+            {{ $pageNum }}
+          </a>
+        {{- end -}}
+      {{- end -}}
+    {{- end -}}
+    
+    {{- /* 끝 페이지가 마지막이 아니면 생략 표시와 마지막 페이지 */ -}}
+    {{- if lt $endPage $totalPages -}}
+      {{- if lt $endPage (sub $totalPages 1) -}}
+        <span class="pagination__ellipsis">…</span>
+      {{- end -}}
+      <a class="pagination__link" href="{{ $paginator.Last.URL }}">{{ $totalPages }}</a>
+    {{- end -}}
+    
+    {{- /* 다음 페이지 링크 */ -}}
+    {{- if $paginator.HasNext -}}
+      <a class="pagination__link pagination__link--next" href="{{ $paginator.Next.URL }}" aria-label="다음 페이지">
+        »
+      </a>
+    {{- end -}}
+    
+    {{- /* 마지막 페이지 링크 */ -}}
+    {{- if $paginator.HasNext -}}
+      <a class="pagination__link pagination__link--last" href="{{ $paginator.Last.URL }}" aria-label="마지막 페이지">
+        »»
+      </a>
+    {{- end -}}
+  </div>
+</div>
+{{- end -}}
+{{- end -}}

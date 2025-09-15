@@ -1,0 +1,6 @@
+{{- $id := printf "mermaid-%s-%d-%d" .Page.File.UniqueID .Ordinal (now.Unix) -}}
+<div class="mermaid-container">
+  <div class="mermaid" id="{{ $id }}">
+{{ .Inner }}
+  </div>
+</div>

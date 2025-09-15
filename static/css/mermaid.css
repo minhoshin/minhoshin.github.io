@@ -1,0 +1,28 @@
+/* Mermaid 다이어그램 스타일링 */
+.mermaid {
+  text-align: center;
+  margin: 20px 0;
+  padding: 20px;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  border: 1px solid #e9ecef;
+}
+
+.mermaid svg {
+  max-width: 100%;
+  height: auto;
+}
+
+/* 다이어그램 컨테이너 */
+.mermaid-container {
+  overflow-x: auto;
+  margin: 20px 0;
+}
+
+/* 반응형 디자인 */
+@media (max-width: 768px) {
+  .mermaid {
+    padding: 10px;
+    margin: 10px 0;
+  }
+}

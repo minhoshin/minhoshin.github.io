@@ -1,0 +1,63 @@
+baseURL = "https://minhoshin.github.io"
+languageCode = "ko-kr"
+title = "minhoshin"
+theme = "mainroad"
+
+[pagination]
+  pagerSize = 3  # 페이지당 포스트 수 (테스트를 위해 3개로 설정)
+  # 페이징 설정
+  [pagination.pager]
+    showAll = true  # 모든 페이지 번호 표시
+    showFirst = true  # 첫 페이지 링크 표시
+    showLast = true   # 마지막 페이지 링크 표시
+    showPrev = true   # 이전 페이지 링크 표시
+    showNext = true   # 다음 페이지 링크 표시
+
+[params]
+  subtitle = "LOVE YOUR BELOVED ONE FOREVER"
+  
+  # 포스트 요약 길이 설정 (단어 수) - Mermaid 다이어그램 포함
+  summaryLength = 200
+  
+  # Google AdSense 설정
+  googleAdSense = "ca-pub-3797616220778362"
+  customJS = ["js/adsense.js"]
+  
+  # 메인 섹션 설정 (페이징을 위해 필요)
+  mainSections = ["post"]
+  
+  # Mermaid 다이어그램 지원
+  mermaid = true
+
+[params.sidebar]
+  home = "right"   # 홈페이지에서 사이드바 위치
+  list = "right"   # 목록 페이지에서 사이드바 위치  
+  single = "right" # 단일 페이지에서 사이드바 위치
+  # 위젯 설정
+  widgets = ["search", "recent", "categories"]
+
+[menu]
+  [[menu.main]]
+    name = "홈"
+    url = "/"
+    weight = 10
+  
+  [[menu.main]]
+    name = "Mermaid"
+    url = "/categories/mermaid/"
+    weight = 20
+  
+  [[menu.main]]
+    name = "IDE"
+    url = "/categories/ide/"
+    weight = 30
+  
+  [[menu.main]]
+    name = "ETC"
+    url = "/categories/etc/"
+    weight = 35
+  
+  [[menu.main]]
+    name = "모든 포스트"
+    url = "/post/"
+    weight = 40

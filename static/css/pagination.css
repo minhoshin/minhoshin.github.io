@@ -1,0 +1,168 @@
+/* 심플한 텍스트 + 화살표 페이징 디자인 */
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1.5rem 0;
+  padding: 1rem 0;
+  border-top: 1px solid #e5e5e5;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+.pagination__list {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  gap: 1rem;
+  align-items: center;
+}
+
+.pagination__link {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  text-decoration: none;
+  color: #007bff;
+  font-weight: 500;
+  font-size: 0.8rem;
+  transition: all 0.2s ease;
+  border-radius: 6px;
+  background: none;
+  border: none;
+}
+
+.pagination__link:hover {
+  background-color: #f8f9fa;
+  color: #0056b3;
+  transform: translateY(-1px);
+}
+
+/* 현재 페이지 스타일 */
+.pagination__link--current {
+  background-color: #007bff;
+  color: #fff;
+  font-weight: 600;
+  box-shadow: 0 2px 4px rgba(0, 123, 255, 0.3);
+}
+
+.pagination__link--current:hover {
+  background-color: #0056b3;
+  color: #fff;
+  transform: none;
+}
+
+/* 이전/다음 페이지 스타일 - 화살표 강조 */
+.pagination__link--prev,
+.pagination__link--next {
+  font-weight: 600;
+  font-size: 0.9rem;
+  padding: 0.5rem 0.75rem;
+  background-color: #f8f9fa;
+  border: 1px solid #dee2e6;
+  color: #495057;
+}
+
+.pagination__link--prev:hover,
+.pagination__link--next:hover {
+  background-color: #e9ecef;
+  border-color: #adb5bd;
+  color: #212529;
+  transform: translateY(-1px);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* 첫 페이지/마지막 페이지 스타일 - 더 작은 화살표 */
+.pagination__link--first,
+.pagination__link--last {
+  font-weight: 600;
+  font-size: 0.8rem;
+  padding: 0.4rem 0.6rem;
+  background-color: #f8f9fa;
+  border: 1px solid #dee2e6;
+  color: #6c757d;
+}
+
+.pagination__link--first:hover,
+.pagination__link--last:hover {
+  background-color: #e9ecef;
+  border-color: #adb5bd;
+  color: #495057;
+  transform: translateY(-1px);
+}
+
+/* 비활성화된 링크 스타일 */
+.pagination__link--disabled {
+  color: #adb5bd;
+  cursor: not-allowed;
+  opacity: 0.5;
+  background-color: #f8f9fa;
+  border-color: #e9ecef;
+}
+
+.pagination__link--disabled:hover {
+  color: #adb5bd;
+  transform: none;
+  box-shadow: none;
+  background-color: #f8f9fa;
+}
+
+/* 페이지 번호 그룹 구분 - 생략 표시 */
+.pagination__ellipsis {
+  display: flex;
+  align-items: center;
+  padding: 0.5rem;
+  color: #6c757d;
+  font-weight: 500;
+  font-size: 0.75rem;
+}
+
+/* 반응형 디자인 */
+@media (max-width: 768px) {
+  .pagination {
+    margin: 1rem 0;
+    padding: 0.75rem 0;
+  }
+  
+  .pagination__list {
+    gap: 0.5rem;
+  }
+  
+  .pagination__link {
+    padding: 0.4rem 0.8rem;
+    font-size: 0.75rem;
+  }
+  
+  .pagination__link--prev,
+  .pagination__link--next {
+    padding: 0.4rem 0.6rem;
+    font-size: 0.8rem;
+  }
+  
+  .pagination__link--first,
+  .pagination__link--last {
+    padding: 0.3rem 0.5rem;
+    font-size: 0.75rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .pagination__list {
+    gap: 0.25rem;
+  }
+  
+  .pagination__link {
+    padding: 0.3rem 0.6rem;
+    font-size: 0.7rem;
+  }
+  
+  .pagination__link--prev,
+  .pagination__link--next {
+    padding: 0.3rem 0.5rem;
+    font-size: 0.75rem;
+  }
+  
+  .pagination__link--first,
+  .pagination__link--last {
+    padding: 0.25rem 0.4rem;
+    font-size: 0.7rem;
+  }
+}
